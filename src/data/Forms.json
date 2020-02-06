@@ -1,0 +1,685 @@
+{
+  "AccountsForm": {
+    "formId": "AccountsForm",
+    "actions": [
+      {
+        "host": "ob.lightapi.net",
+        "title": "Filter",
+        "success": "/accounts/"
+      }
+    ],
+    "schema": {
+      "type": "object",
+      "required": [
+        "accountId"
+      ],
+      "title": "Account Filter",
+      "properties": {
+        "userId": {
+          "title": "User Id",
+          "type": "string",
+          "readonly": true
+        },
+        "accountId": {
+          "title": "Account Id",
+          "type": "string"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'stevehu'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "22289",
+            "name": "22289"
+          },
+          {
+            "value": "31820",
+            "name": "31820"
+          }
+        ]
+      },
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'ericbroda'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "42281",
+            "name": "42281"
+          },
+          {
+            "value": "41221",
+            "name": "41221"
+          }
+        ]
+      }
+    ]
+  },
+  "BalancesForm": {
+    "formId": "BalancesForm",
+    "actions": [
+      {
+        "host": "ob.lightapi.net",
+        "title": "Filter",
+        "success": "/balances/"
+      }
+    ],
+    "schema": {
+      "type": "object",
+      "required": [
+        "accountId"
+      ],
+      "title": "Account Filter",
+      "properties": {
+        "userId": {
+          "title": "User Id",
+          "type": "string",
+          "readonly": true
+        },
+        "accountId": {
+          "title": "Account Id",
+          "type": "string"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'stevehu'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "22289",
+            "name": "22289"
+          },
+          {
+            "value": "31820",
+            "name": "31820"
+          }
+        ]
+      },
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'ericbroda'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "42281",
+            "name": "42281"
+          },
+          {
+            "value": "41221",
+            "name": "41221"
+          }
+        ]
+      }
+    ]
+  },
+  "BeneficiariesForm": {
+    "formId": "BeneficiariesForm",
+    "actions": [
+      {
+        "host": "ob.lightapi.net",
+        "title": "Filter",
+        "success": "/beneficiaries/"
+      }
+    ],
+    "schema": {
+      "type": "object",
+      "required": [
+        "accountId"
+      ],
+      "title": "Account Filter",
+      "properties": {
+        "userId": {
+          "title": "User Id",
+          "type": "string",
+          "readonly": true
+        },
+        "accountId": {
+          "title": "Account Id",
+          "type": "string"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'stevehu'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "22289",
+            "name": "22289"
+          },
+          {
+            "value": "31820",
+            "name": "31820"
+          }
+        ]
+      },
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'ericbroda'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "42281",
+            "name": "42281"
+          },
+          {
+            "value": "41221",
+            "name": "41221"
+          }
+        ]
+      }
+    ]
+  },
+  "DirectDebitsForm": {
+    "formId": "DirectDebitsForm",
+    "actions": [
+      {
+        "host": "ob.lightapi.net",
+        "title": "Filter",
+        "success": "/direct-debits/"
+      }
+    ],
+    "schema": {
+      "type": "object",
+      "required": [
+        "accountId"
+      ],
+      "title": "Account Filter",
+      "properties": {
+        "userId": {
+          "title": "User Id",
+          "type": "string",
+          "readonly": true
+        },
+        "accountId": {
+          "title": "Account Id",
+          "type": "string"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'stevehu'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "22289",
+            "name": "22289"
+          },
+          {
+            "value": "31820",
+            "name": "31820"
+          }
+        ]
+      },
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'ericbroda'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "42281",
+            "name": "42281"
+          },
+          {
+            "value": "41221",
+            "name": "41221"
+          }
+        ]
+      }
+    ]
+  },
+  "OffersForm": {
+    "formId": "OffersForm",
+    "actions": [
+      {
+        "host": "ob.lightapi.net",
+        "title": "Filter",
+        "success": "/offers/"
+      }
+    ],
+    "schema": {
+      "type": "object",
+      "required": [
+        "accountId"
+      ],
+      "title": "Account Filter",
+      "properties": {
+        "userId": {
+          "title": "User Id",
+          "type": "string",
+          "readonly": true
+        },
+        "accountId": {
+          "title": "Account Id",
+          "type": "string"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'stevehu'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "22289",
+            "name": "22289"
+          },
+          {
+            "value": "31820",
+            "name": "31820"
+          }
+        ]
+      },
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'ericbroda'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "42281",
+            "name": "42281"
+          },
+          {
+            "value": "41221",
+            "name": "41221"
+          }
+        ]
+      }
+    ]
+  },
+  "PartiesForm": {
+    "formId": "PartiesForm",
+    "actions": [
+      {
+        "host": "ob.lightapi.net",
+        "title": "Filter",
+        "success": "/parties/"
+      }
+    ],
+    "schema": {
+      "type": "object",
+      "required": [
+        "accountId"
+      ],
+      "title": "Account Filter",
+      "properties": {
+        "userId": {
+          "title": "User Id",
+          "type": "string",
+          "readonly": true
+        },
+        "accountId": {
+          "title": "Account Id",
+          "type": "string"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'stevehu'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "22289",
+            "name": "22289"
+          },
+          {
+            "value": "31820",
+            "name": "31820"
+          }
+        ]
+      },
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'ericbroda'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "42281",
+            "name": "42281"
+          },
+          {
+            "value": "41221",
+            "name": "41221"
+          }
+        ]
+      }
+    ]
+  },
+  "ProductsForm": {
+    "formId": "ProductsForm",
+    "actions": [
+      {
+        "host": "ob.lightapi.net",
+        "title": "Filter",
+        "success": "/products/"
+      }
+    ],
+    "schema": {
+      "type": "object",
+      "required": [
+        "accountId"
+      ],
+      "title": "Account Filter",
+      "properties": {
+        "userId": {
+          "title": "User Id",
+          "type": "string",
+          "readonly": true
+        },
+        "accountId": {
+          "title": "Account Id",
+          "type": "string"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'stevehu'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "22289",
+            "name": "22289"
+          },
+          {
+            "value": "31820",
+            "name": "31820"
+          }
+        ]
+      },
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'ericbroda'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "42281",
+            "name": "42281"
+          },
+          {
+            "value": "41221",
+            "name": "41221"
+          }
+        ]
+      }
+    ]
+  },
+  "ScheduledPaymentsForm": {
+    "formId": "ScheduledPaymentsForm",
+    "actions": [
+      {
+        "host": "ob.lightapi.net",
+        "title": "Filter",
+        "success": "/scheduled-payments/"
+      }
+    ],
+    "schema": {
+      "type": "object",
+      "required": [
+        "accountId"
+      ],
+      "title": "Account Filter",
+      "properties": {
+        "userId": {
+          "title": "User Id",
+          "type": "string",
+          "readonly": true
+        },
+        "accountId": {
+          "title": "Account Id",
+          "type": "string"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'stevehu'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "22289",
+            "name": "22289"
+          },
+          {
+            "value": "31820",
+            "name": "31820"
+          }
+        ]
+      },
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'ericbroda'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "42281",
+            "name": "42281"
+          },
+          {
+            "value": "41221",
+            "name": "41221"
+          }
+        ]
+      }
+    ]
+  },
+  "StandingOrdersForm": {
+    "formId": "StandingOrdersForm",
+    "actions": [
+      {
+        "host": "ob.lightapi.net",
+        "title": "Filter",
+        "success": "/standing-orders/"
+      }
+    ],
+    "schema": {
+      "type": "object",
+      "required": [
+        "accountId"
+      ],
+      "title": "Account Filter",
+      "properties": {
+        "userId": {
+          "title": "User Id",
+          "type": "string",
+          "readonly": true
+        },
+        "accountId": {
+          "title": "Account Id",
+          "type": "string"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'stevehu'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "22289",
+            "name": "22289"
+          },
+          {
+            "value": "31820",
+            "name": "31820"
+          }
+        ]
+      },
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'ericbroda'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "42281",
+            "name": "42281"
+          },
+          {
+            "value": "41221",
+            "name": "41221"
+          }
+        ]
+      }
+    ]
+  },
+  "StatementsForm": {
+    "formId": "StatementsForm",
+    "actions": [
+      {
+        "host": "ob.lightapi.net",
+        "title": "Filter",
+        "success": "/statements/"
+      }
+    ],
+    "schema": {
+      "type": "object",
+      "required": [
+        "accountId"
+      ],
+      "title": "Account Filter",
+      "properties": {
+        "userId": {
+          "title": "User Id",
+          "type": "string",
+          "readonly": true
+        },
+        "accountId": {
+          "title": "Account Id",
+          "type": "string"
+        },
+        "statementId": {
+          "title": "Statement Id",
+          "type": "string"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'stevehu'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "22289",
+            "name": "22289"
+          },
+          {
+            "value": "31820",
+            "name": "31820"
+          }
+        ]
+      },
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'ericbroda'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "42281",
+            "name": "42281"
+          },
+          {
+            "value": "41221",
+            "name": "41221"
+          }
+        ]
+      },
+      {
+        "key": "statementId",
+        "condition": "model.userId === 'stevehu'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "8sfhke-sifhkeuf-97813",
+            "name": "8sfhke-sifhkeuf-97813"
+          },
+          {
+            "value": "34hj24u-324h33-31i3p4",
+            "name": "34hj24u-324h33-31i3p4"
+          }
+        ]
+      }
+    ]
+  },
+  "TransactionsForm": {
+    "formId": "TransactionsForm",
+    "actions": [
+      {
+        "host": "ob.lightapi.net",
+        "service": "playground",
+        "action": "generateJwt",
+        "version": "0.1.0",
+        "title": "Filter",
+        "success": "/transactions/"
+      }
+    ],
+    "schema": {
+      "type": "object",
+      "required": [
+        "accountId"
+      ],
+      "title": "Account Filter",
+      "properties": {
+        "userId": {
+          "title": "User Id",
+          "type": "string",
+          "readonly": true
+        },
+        "accountId": {
+          "title": "Account Id",
+          "type": "string"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'stevehu'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "22289",
+            "name": "22289"
+          },
+          {
+            "value": "31820",
+            "name": "31820"
+          }
+        ]
+      },
+      {
+        "key": "accountId",
+        "condition": "model.userId === 'ericbroda'",
+        "type": "select",
+        "titleMap": [
+          {
+            "value": "42281",
+            "name": "42281"
+          },
+          {
+            "value": "41221",
+            "name": "41221"
+          }
+        ]
+      }
+    ]
+  }
+
+}
