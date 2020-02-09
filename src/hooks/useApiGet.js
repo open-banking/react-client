@@ -2,6 +2,7 @@
 import { useReducer, useEffect } from 'react';
 import { requestStarted, requestSuccess, requestFailure } from './action';
 import { reducer } from './reducer';
+import { useCookies } from 'react-cookie';
 
 export const useApiGet = ({ url, headers }) => {
   const [state, dispatch] = useReducer(reducer, {
@@ -10,14 +11,20 @@ export const useApiGet = ({ url, headers }) => {
     error: null,
   });
 
+  const [cookies, setCookie] = useCookies(['csrf']);
+  console.log(cookies);
+  Object.assign(headers, {'X-CSRF-TOKEN': cookies.csrf})
+  console.log(headers);
+
   useEffect(() => {
     const abortController = new AbortController();
+
     const fetchData = async () => {
       dispatch(requestStarted());
 
       try {
-        const response = await fetch(url, { headers, signal: abortController.signal });
-
+        const response = await fetch(url, { headers, credentials: 'include', signal: abortController.signal });
+        console.log(response);
         if (!response.ok) {
           throw new Error(
             `${response.status} ${response.statusText}`
@@ -30,6 +37,7 @@ export const useApiGet = ({ url, headers }) => {
       } catch (e) {
         // only call dispatch when we know the fetch was not aborted
         if (!abortController.signal.aborted) {
+          console.log(e.message);
           dispatch(requestFailure({ error: e.message }));
         }        
       }

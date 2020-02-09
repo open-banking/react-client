@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { CookiesProvider } from 'react-cookie';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -16,7 +17,9 @@ ReactDOM.render(
 (   
     <HashRouter>
         <MuiThemeProvider theme={theme}>
-            <App/>
+            <CookiesProvider>
+                <App/>
+            </CookiesProvider>    
         </MuiThemeProvider>
     </HashRouter>
 ),
