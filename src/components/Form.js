@@ -8,6 +8,7 @@ import forms from '../data/Forms';
 import { reducer } from '../hooks/reducer';
 import { requestSuccess, submitForm } from '../hooks/action';
 import { history } from '../App';
+import { useCookies } from 'react-cookie';
 
 const styles = theme => ({
     root: {
@@ -39,6 +40,10 @@ function Form(props) {
     const [model, setModel] = useState({});
 
     const { classes } = props;
+    
+    const [cookies, setCookie] = useCookies(['userId']);
+    const userId = cookies.userId;
+    console.log(userId);
 
     useEffect(() => {
         console.log(props.match.params.formId);
@@ -47,7 +52,7 @@ function Form(props) {
         setSchema(formData.schema);
         setForm(formData.form);
         setActions(formData.actions);
-        setModel(formData.model || {userId: 'stevehu'})
+        setModel(formData.model || {userId: userId})
     }, [props.match.params.formId])
 
     const [state, dispatch] = useReducer(reducer);
