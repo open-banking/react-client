@@ -71,7 +71,7 @@ class ResponsiveDrawer extends Component {
     }
 
     login() {
-        window.location = "https://signin.lightapi.net?client_id=f7d42348-c647-4efb-a52d-4c5787421e74&user_type=customer&redirect_uri=https://ob.lightapi.net/authorization&state=1222";
+        window.location = "https://obsignin.lightapi.net?client_id=f7d42348-c647-4efb-a52d-4c5787421e74&user_type=customer&redirect_uri=https://ob.lightapi.net/authorization&state=1222";
     }
 
     render() {
