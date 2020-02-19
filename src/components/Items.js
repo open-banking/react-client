@@ -24,7 +24,7 @@ function Items(props) {
   if(isLoading) {
     wait = <div><CircularProgress/></div>;
   } else {
-    wait = <div><pre>{ JSON.stringify(data, null, 2) }</pre></div>;
+    wait = <div><pre>{ data ? JSON.stringify(data, null, 2) : 'Unauthorized' }</pre></div>;
   }
 
   return (

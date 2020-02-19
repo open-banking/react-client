@@ -21,7 +21,8 @@
     "title":"Home",
     "depth":1,
     "parentIndex":0,
-    "disabled":false
+    "disabled":false,
+    "link": "/"
   },
   {
     "title":"Accounts",
