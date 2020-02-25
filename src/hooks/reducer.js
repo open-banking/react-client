@@ -5,9 +5,16 @@ import {
   GET_REQUEST_FAILURE, 
   SUBMIT_FORM_STARTED, 
   SUBMIT_FORM_SUCCESS, 
-  SUBMIT_FORM_FAILURE } from './action';
+  SUBMIT_FORM_FAILURE,
+  LOGIN,
+  LOGOUT } from './action';
 
 export const AppContext = createContext(null);
+
+export const initialState = {
+  isLoggedIn: false,
+  userId: null
+}
 
 export const reducer = (state, action) => {
   // we check the type of each action and return an updated state object accordingly
@@ -48,6 +55,18 @@ export const reducer = (state, action) => {
         isLoading: false,
         error: action.error,
       };    
+    case LOGIN:
+      return {
+        ...state,
+        userId: action.userId,
+        isLoggedIn: action.isLoggedIn,
+      }  
+    case LOGOUT:
+      return {
+        ...state,
+        userId: action.userId,
+        isLoggedIn: action.isLoggedIn
+      }  
     // usually I ignore the action if its `type` is not matched here, some people prefer throwing errors here - it's really up to you.
     default:
       return state;

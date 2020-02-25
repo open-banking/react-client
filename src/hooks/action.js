@@ -4,6 +4,8 @@ export const GET_REQUEST_FAILURE = 'GET_REQUEST_FAILURE';
 export const SUBMIT_FORM_STARTED = 'SUBMIT_FORM_STARTED';
 export const SUBMIT_FORM_SUCCESS = 'SUBMIT_FORM_SUCCESS';
 export const SUBMIT_FORM_FAILURE = 'SUBMIT_FORM_FAILURE';
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
 
 export const requestSuccess = ({data}) => ({
     type: GET_REQUEST_SUCCESS,

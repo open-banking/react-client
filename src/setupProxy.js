@@ -15,4 +15,5 @@ module.exports = function(app) {
   app.use(proxy('/statements', { target: 'https://ob.lightapi.net', secure: false }));
   app.use(proxy('/transactions', { target: 'https://ob.lightapi.net', secure: false }));
   app.use(proxy('/authorization', { target: 'https://ob.lightapi.net', secure: false }));
+  app.use(proxy('/logout', { target: 'https://ob.lightapi.net', secure: false }));
 };

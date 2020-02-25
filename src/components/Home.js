@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
+import { useCookies } from 'react-cookie';
+import { AppContext } from '../hooks/reducer';
+import { LOGIN, LOGOUT } from '../hooks/action';
+
+
 
 const useStyles = makeStyles({
     root: {
@@ -12,7 +17,29 @@ const useStyles = makeStyles({
 });
 
 export default function Home() {
+    const [cookies, setCookie] = useCookies(['userId']);
+    const {state, dispatch } = useContext(AppContext);
+    useEffect(() => {
+        const userId = cookies.userId;
+        console.log(userId);
+        if(userId) {
+            dispatch ({
+                type: LOGIN,
+                userId: userId,
+                isLoggedIn: true    
+            });
+        } else {
+            dispatch ({
+                type: LOGOUT,
+                userId: null,
+                isLoggedIn: false
+            })
+        }
+    }, []);
+
+
     const classes = useStyles();
+    
     return (
         <div>
             <h2>Home</h2>

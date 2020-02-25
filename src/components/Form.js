@@ -5,8 +5,6 @@ import Button from '@material-ui/core/Button';
 import SchemaForm from 'react-schema-form/lib/SchemaForm';
 import utils from 'react-schema-form/lib/utils';
 import forms from '../data/Forms';
-import { reducer } from '../hooks/reducer';
-import { requestSuccess, submitForm } from '../hooks/action';
 import { history } from '../App';
 import { useCookies } from 'react-cookie';
 
@@ -55,8 +53,6 @@ function Form(props) {
         setModel(formData.model || {userId: userId})
     }, [props.match.params.formId])
 
-    const [state, dispatch] = useReducer(reducer);
-
     function onModelChange(key, val) {
         //console.log(this.state.model);
         utils.selectOrSet(key, model, val);
@@ -72,7 +68,6 @@ function Form(props) {
             setFetching(true);
             console.log("history push");
             props.history.push({pathname: '/items', state: {path: action.success, accountId: model.accountId, statementId: model.statementId}});
-            //dispatch(submitForm({...action, ...model}));  
         }
     };
 

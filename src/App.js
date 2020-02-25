@@ -17,11 +17,15 @@ import Statements from './components/Statements';
 import Items from './components/Items';
 import ResponsiveDrawer from './components/ResponsiveDrawer';
 import Form from './components/Form';
+import { AppContext, initialState, reducer } from './hooks/reducer';
 
 export const history = createBrowserHistory();
 
 const App = () => {
+    const [state, dispatch] = useReducer(reducer, initialState);
+
     return (
+        <AppContext.Provider value={{dispatch, state}}>  
           <ResponsiveDrawer>
             <Switch>
               <Route exact path="/" component={Home} />
@@ -41,6 +45,7 @@ const App = () => {
               <Route exact path="/form/:formId" component={Form} />
             </Switch>
           </ResponsiveDrawer>
+        </AppContext.Provider>  
     );
 }
 
