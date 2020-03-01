@@ -74,7 +74,13 @@ function ResponsiveDrawer(props) {
     }
 
     const login = () => {
-        window.location = "https://obsignin.lightapi.net?client_id=f7d42348-c647-4efb-a52d-4c5787421e75&user_type=customer&state=1222";
+        // this is the production redirect with redirect uri https://ob.lightapi.net
+        let url = "https://login.lightapi.net?client_id=f7d42348-c647-4efb-a52d-4c5787421e74&user_type=customer&state=1222";
+        if(process.env.NODE_ENV !== 'production') {
+            // this is development redirect with redirect uri https://localhost:3000
+            url = "https://login.lightapi.net?client_id=f7d42348-c647-4efb-a52d-4c5787421e75&user_type=customer&state=1222";
+        } 
+        window.location = url;
     }
 
     const { children, theme, location } = props;
